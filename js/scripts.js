@@ -16,6 +16,13 @@ function randomQuote() {
       $("#target").html(
         '<p id="author" class="text-right"> ‐' + quoteData.quoteAuthor + "</p>"
       );
+      $("#tweet-quote").attr(
+        "href",
+        "https://twitter.com/home/?status=" +
+          quoteData.quoteText +
+          " - " +
+          quoteData.quoteAuthor
+      );
     }
   });
 }
