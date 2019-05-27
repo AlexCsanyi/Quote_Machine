@@ -1,3 +1,14 @@
+$(document).ready(function() {
+  $("#night-mode-js").click(function() {
+    $("body").toggleClass("night-mode");
+    if ($("#night-mode-js").hasClass("night-mode")) {
+      $("#night-mode-js").html("Night-mode");
+    } else {
+      $("#night-mode-js").html("Day-mode");
+    }
+  });
+});
+
 function randomQuote() {
   $.ajax({
     url: "http://api.forismatic.com/api/1.0/?",
